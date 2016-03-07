@@ -12,7 +12,7 @@ $DATA = decode_json $DATAjson;
 
 
 # pagina de todas las novedades
-my $templates = HTML::Template->new(filename => 'novedades.tmpl');
+my $templates = HTML::Template->new(filename => 'templates/novedades.tmpl');
 $templates->param(NOVEDAD => JSON::Any->new->decode($DATAjson));
 print 'generando : novedades.html'."\n";
 
@@ -20,7 +20,7 @@ write_file('output/novedades.html', $templates->output);
 
 
 # pagina individual para cada novedad
-my $template = HTML::Template->new(filename => 'novedad.tmpl');
+my $template = HTML::Template->new(filename => 'templates/novedad.tmpl');
 my @novedades = @{ $DATA };
 
 foreach my $f ( @novedades ) {
