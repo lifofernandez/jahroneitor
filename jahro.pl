@@ -1,43 +1,42 @@
+# jahro.pl
 
-# students.pl
 use Data::Dumper;
 use HTML::Template;
 use File::Slurp; 
-use JSON;
-use JSON::Any;
 use URI::Escape;
+use YAML qw(Dump Bless);
+use YAML::Node;
+use YAML::XS 'LoadFile';
+my $DATAyaml = LoadFile('data.yaml');
 
-my $DATAjson = read_file('data.json');
-$DATA = decode_json $DATAjson;
 
 
-# pagina de todas las novedades
+# template de todas las novedades
 my $templates = HTML::Template->new(filename => 'templates/novedades.tmpl');
-$templates->param(NOVEDAD => JSON::Any->new->decode($DATAjson));
-print 'generando : novedades.html'."\n";
 
+# template individual para cada novedad
+my $template = HTML::Template->new(filename => 'templates/novedad.tmpl');
+
+
+my @H = ();
+foreach my $dk (keys (%$DATAyaml)){
+	my %temp_hash = %{ $DATAyaml->{$dk} };
+	# paso CODIGO adentro del hash
+	$temp_hash{CODIGO} .= $dk;
+
+	#paso hash al array de hashes 
+	my $ref_temp_hash = \%temp_hash;
+	push(@H,$ref_temp_hash);
+
+
+	# html individual para cada novedad
+	$template->param($ref_temp_hash);
+	write_file('output/'.$dk.'.html', $template->output);
+}
+
+# html individual de todas las novedades
+$templates->param(NOVEDAD => \@H);
 write_file('output/novedades.html', $templates->output);
 
 
-# pagina individual para cada novedad
-my $template = HTML::Template->new(filename => 'templates/novedad.tmpl');
-my @novedades = @{ $DATA };
-
-foreach my $f ( @novedades ) {
-  	# print $f->{"NAME"} . "\n";
-
-	$template->param(
-		NAME => $f->{"NAME"},
-		GPA => $f->{"GPA"}
-
-	);
-
-	my $URL = lc($f->{"NAME"});
-	$URL=~s/ /-/g;
-	print 'generando : '.$URL."\n";
-
-
-  	write_file('output/'.$URL.'.html', $template->output);
-
-}
 
