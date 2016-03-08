@@ -2,5 +2,5 @@
 <p id="<TMPL_VAR NAME=CODIGO>">
    Nombre: <TMPL_VAR NAME=NOMBRE><br/>
    Resumen: <TMPL_VAR NAME=RESUMEN><br/>
-   Categoria: <TMPL_VAR NAME=CATEGORIA>
+   Categorias: <TMPL_LOOP NAME=CATEGORIAS>- <TMPL_VAR NAME=TAG> </TMPL_LOOP>
 </p>
