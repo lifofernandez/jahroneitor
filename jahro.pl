@@ -8,6 +8,8 @@ use YAML qw(Dump Bless);
 use YAML::Node;
 use YAML::XS 'LoadFile';
 my $DATAyaml = LoadFile('data.yaml');
+use Text::Markdown 'markdown';
+
 
 
 
@@ -19,17 +21,21 @@ my $template = HTML::Template->new(filename => 'templates/novedad.tmpl');
 
 
 my @H = ();
+
 foreach my $dk (keys (%$DATAyaml)){
-	my %temp_hash = %{ $DATAyaml->{$dk} };
-	# paso CODIGO adentro del hash
+	my %temp_hash = %{$DATAyaml->{$dk}};
+	
+	$temp_hash{DESCRIPCION} = markdown($temp_hash{DESCRIPCION});
+
+	# paso c/CODIGO adentro de c/hash
 	$temp_hash{CODIGO} .= $dk;
 
-	#paso hash al array de hashes 
+	#paso hashderef al array de hashes @H
 	my $ref_temp_hash = \%temp_hash;
 	push(@H,$ref_temp_hash);
 
 
-	# html individual para cada novedad
+	# genero html individual para cada novedad
 	$template->param($ref_temp_hash);
 	write_file('output/'.$dk.'.html', $template->output);
 }

@@ -1,6 +1,8 @@
 <!-- novedad.tmpl -->
-<p id="<TMPL_VAR NAME=CODIGO>">
-   Nombre: <TMPL_VAR NAME=NOMBRE><br/>
-   Resumen: <TMPL_VAR NAME=RESUMEN><br/>
-   Categorias: <TMPL_LOOP NAME=CATEGORIAS>- <TMPL_VAR NAME=TAG> </TMPL_LOOP>
-</p>
+<div id="<TMPL_VAR NAME=CODIGO>">
+	<div class="nombre">Nombre: <TMPL_VAR NAME=NOMBRE></div>
+	<div class="descripcion">Descripción: <TMPL_VAR NAME=DESCRIPCION>	</div>
+	<div class="categorias">Categorias:
+		<TMPL_LOOP NAME=CATEGORIAS><span class="categoria"><TMPL_VAR NAME=TAG></span></TMPL_LOOP>
+	</div>
+</div>
