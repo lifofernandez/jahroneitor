@@ -9,8 +9,10 @@ use YAML::Node;
 use YAML::XS 'LoadFile';
 my $DATAyaml = LoadFile('data.yaml');
 use Text::Markdown 'markdown';
+use HTML::Tidy;
 
-
+my $tidy = 'HTML::Tidy'->new({INDENT => 1,tidy_mark => 0,});
+#  $tidy->ignore( text => qr/p/ );
 
 
 # template de todas las novedades
@@ -37,12 +39,15 @@ foreach my $dk (keys (%$DATAyaml)){
 
 	# genero html individual para cada novedad
 	$template->param($ref_temp_hash);
-	write_file('output/'.$dk.'.html', $template->output);
+	write_file('output/'.$dk.'.html', $tidy->clean($template->output));
 }
 
 # html individual de todas las novedades
 $templates->param(NOVEDAD => \@H);
-write_file('output/novedades.html', $templates->output);
+write_file('output/novedades.html', $tidy->clean($templates->output));
+
+
+# print $tidy->clean($templates->output);
 
 
 

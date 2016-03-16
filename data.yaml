@@ -1,12 +1,69 @@
-JH001: 
-  NOMBRE: Sono 12
-  DESCRIPCION: '**Lorem** ipsum dolor *sit* amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+jh6016-jh6015:
+  NOMBRE: Cables UTP
+  DESCRIPCION: 'CABLE DE INTERIOR BLANCO<br>CABLE DE EXTERIOR NEGRO<br>305 metros'
   CATEGORIAS: 
-    - TAG: parlantes 
-    - TAG: autos
-JH002:
-  NOMBRE: Filie
-  DESCRIPCION: Lorem ipsum dolor sit amet, consectetur [adipisicing](google.com) elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    - TAG: Cables 
+    - TAG: Redes
+    - TAG: Datos
+  IMAGENES: 
+    - IMG: cables-utp.jpg
+
+jh452-jh591-jh599-jh807-jh3801-jh3812:
+  NOMBRE: Controles que no estan en el catalogo  
+  DESCRIPCION: '- jh452
+
+- jh591
+
+- jh599
+
+- jh807
+
+- jh3801
+
+- jh3812'
   CATEGORIAS: 
-    - TAG: controles
+    - TAG: Controles
+  IMAGENES:
+    - IMG: controles-sincatalogar.png
+
+jh001:
+  NOMBRE: Controles Nuevos
+  DESCRIPCION: '- jhrc126
+
+  - jhrc158
+
+  - jhd287'
+  CATEGORIAS: 
+    - TAG: Controles
+  IMAGENES:
+    - IMG: control1.png
+    - IMG: control2.png
+    - IMG: control3.png
+
+jh000:
+  NOMBRE: Fuentes Switching 
+  DESCRIPCION: 'En Cajas Individuales<br>Se Puede Cambiar La Polaridad<br>**Proximamente Nuevos Modelos**
+
+
+MODELOS:
+
+
+- 12 VOLTS 1A
+
+- 12 VOLTS 1,5A
+
+- 12 VOLTS 2A
+
+- 9 VOLTS  1A
+
+
+'
+  CATEGORIAS: 
+    - TAG: Fuentes
+    - TAG: 12v
+    - TAG: 9v
+
+  IMAGENES: 
+    - IMG: fuentes.jpg    
+
 
