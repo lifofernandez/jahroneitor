@@ -8,16 +8,16 @@
   <meta name="author" content="lifo fernandez">
   <link rel="shortcut icon" href="ico/favicon.ico">
 
-  <title>JAHRO :: Novedades</title>
+  <title>JAHRO :: Novedades :: <TMPL_VAR NAME=NOMBRE></title>
 
   <!-- Bootstrap core CSS -->
-  <link href="http://jahro.com.ar/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
 
   <!-- bootswatch superhero theme -->
-  <link href="http://jahro.com.ar/css/bootswatch-superhero.min.css" rel="stylesheet">
+  <link href="../css/bootswatch-superhero.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="http://jahro.com.ar/jahro-template.css" rel="stylesheet">
+  <link href="../jahro-template.css" rel="stylesheet">
 
   <link href='http://fonts.googleapis.com/css?family=Ruda:400,700,900' rel='stylesheet' type='text/css'>
 
@@ -25,13 +25,24 @@
 </head>
 
 <style type="text/css">
-	.container{
-		background-image: none;
-		
+	body{
+		background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Coloured_Voronoi_3D_slice.svg/2000px-Coloured_Voronoi_3D_slice.svg.png');
 	}
-	.principal {
+	.image{
+		height: 250px;
+	}
+	
+	.principal{
     	padding: 80px 0px;
 	}
+	
+	ul,ol{
+		padding-left: 16px;
+	}
+	.navbar-inverse {
+    	background-color: #5cb85c;
+	}
+
 </style>
 <div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
@@ -42,11 +53,11 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="/">Jharo</a>
+		  <a class="navbar-brand" href="/">Jahro</a>
 		</div>
 		<div id="navbar" class="collapse navbar-collapse">
 		  <ul class="nav navbar-nav">
-			<li><a href="/novedades.html">Novedades</a></li>
+			<li><a href="/novedades/index.html">Novedades</a></li>
 		  </ul>
 		</div>
 		<!--/.nav-collapse -->
@@ -55,7 +66,7 @@
 
 <div class="container" role="main">
 	<div class="principal">
-		<div id="<TMPL_VAR NAME=CODIGO>" class="item panel panel-primary">
+		<div id="<TMPL_VAR NAME=CODIGO>" class="item panel panel-success">
 			<div class="panel-heading"><h1 class="panel-title nombre"><a href="<TMPL_VAR NAME=CODIGO>.html"><TMPL_VAR NAME=NOMBRE></a></h1></div>
 			<div class="panel-body">
 				<div class="row">
@@ -73,7 +84,7 @@
 			<div class="panel-footer">
 				<p class="categorias">
 					<TMPL_LOOP NAME=CATEGORIAS>
-						<span class="categoria label label-primary"><TMPL_VAR NAME=TAG></span>
+						<span class="categoria label label-success"><TMPL_VAR NAME=TAG></span>
 					</TMPL_LOOP>
 				</p>
 			</div>

@@ -44,7 +44,7 @@ foreach my $dk (keys (%$DATAyaml)){
 
 # html individual de todas las novedades
 $templates->param(NOVEDAD => \@H);
-write_file('output/novedades.html', $tidy->clean($templates->output));
+write_file('output/index.html', $tidy->clean($templates->output));
 
 
 # print $tidy->clean($templates->output);

@@ -23,6 +23,7 @@ jh452-jh591-jh599-jh807-jh3801-jh3812:
 - jh3812'
   CATEGORIAS: 
     - TAG: Controles
+    - TAG: Nuevos
   IMAGENES:
     - IMG: controles-sincatalogar.png
 
@@ -35,6 +36,8 @@ jh001:
   - jhd287'
   CATEGORIAS: 
     - TAG: Controles
+    - TAG: Nuevos
+
   IMAGENES:
     - IMG: control1.png
     - IMG: control2.png
