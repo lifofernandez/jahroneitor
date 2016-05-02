@@ -1,0 +1,53 @@
+# "Productos" en formato YAML > https://es.wikipedia.org/wiki/YAML
+
+# Estructura
+
+CODIGO:
+	NOMBRE: 
+	IMAGEN: 
+	CODIGO-INTERNO: 
+	DESCRIPCION: | 
+	PRESENTACION: 
+	SECCION: 
+	LINEA: 
+	TIPO: 
+	NOVEDAD: 
+	DESTACADO: 
+	PALABRAS-CLAVE: []
+
+
+# Tener en cuenta que:
+
+# Codigo, Nombre, Imagen, Codigo Interno, Descripcion, Seccion, Linea, Tipo son obligatorios
+
+# Preservar saltos de línea comenzando las cadenas de texto con una pleca ( | ) 
+# https://es.wikipedia.org/wiki/YAML#Preservando_retornos_de_l.C3.ADnea
+
+# Las listas se pueden escribir de 2 maneras [foo,bar,hola,mego]
+# https://es.wikipedia.org/wiki/YAML#Arrays_asociativos_de_listas
+
+
+
+# Ejemplo
+
+jc69120:
+	NOMBRE: 6” x 9” CUATRIAXIAL 
+	IMAGEN: jc69120.png
+	CODIGO-INTERNO: jhr5152
+	DESCRIPCION: | Alta Potencia
+		Potencia: 120W RMS
+		Peso Imán:20 Oz.
+		Fo: 40 Hz. | Resp. en Frecuencia.: 40-20000 Hz.
+		SPL: 94 dB/1W/1m
+		Impedancia: 4 ohms
+	PRESENTACION: Caja cerrada contiene 4 unidades
+	SECCION: Gris
+	LINEA: PARLANTES CAR AUDIO JAHRO
+	TIPO: Parlante para automovil
+	NOVEDAD: no
+	DESTACADO: no
+	PALABRAS-CLAVE: [TRIAXIAL,6” x 9”,Alta Potencia]
+
+
+
+
