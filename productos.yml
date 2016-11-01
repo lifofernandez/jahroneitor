@@ -7,7 +7,7 @@
 # Notas
 
 # Cadenas de texto
-# Para preservar los saltos de línea comenzando las cadenas de texto con una | (pleca) 
+# Para preservar los saltos de línea comenzando los strings con una | (pleca) 
 # https://es.wikipedia.org/wiki/YAML#Preservando_retornos_de_l.C3.ADnea
 
 # Listas
@@ -17,14 +17,15 @@
 
 # Estructura
 CODIGO:
+  CODIGO-INTERNO: 
   NOMBRE: 
   IMAGEN: 
-  CODIGO-INTERNO: 
-  DESCRIPCION: | 
-  PRESENTACION: 
   TIPO:
   LINEA: []
-  PALABRAS-CLAVE: []
+  ETIQUETAS: []
+  DESCRIPCION: | 
+  PRESENTACION: 
+
 
 
 # Ejemplo
@@ -32,6 +33,11 @@ jc69120:
   NOMBRE: 6” x 9” Cuatriaxial 
   IMAGEN: jc69120.png
   CODIGO-INTERNO: jhr5152
+  TIPO: Parlante para automovil
+  LINEA: 
+    - Roja:
+       - Woofers
+  ETIQUETAS: [triaxial,6x9”,alta potencia]
   DESCRIPCION: | 
    Alta Potencia
    Potencia: 120W RMS
@@ -40,11 +46,5 @@ jc69120:
    SPL: 94 dB/1W/1m
    Impedancia: 4 ohms
   PRESENTACION: Caja cerrada contiene 4 unidades
-  LINEA: 
-    - Roja:
-       - Woofers
-  TIPO: Parlante para automovil
-  PALABRAS-CLAVE: [triaxial,6x9”,alta potencia]
-
 
 
