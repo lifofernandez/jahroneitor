@@ -1,10 +1,16 @@
 # JAHRO - PRODUCTOS
-# formato YAML: https://es.wikipedia.org/wiki/YAML
-# validador: http://yaml-online-parser.appspot.com/?url=http%3A%2F%2F
 
+# Documentacion formato YAML: https://es.wikipedia.org/wiki/YAML
+# Validador: http://yaml-online-parser.appspot.com/?url=http%3A%2F%2F
+# ¿Por que o para que lo vamos a usar? https://www.thirdandgrove.com/importing-drupal-content-with-yaml
+
+# Notas
+
+# Cadenas de texto
 # Para preservar los saltos de línea comenzando las cadenas de texto con una | (pleca) 
 # https://es.wikipedia.org/wiki/YAML#Preservando_retornos_de_l.C3.ADnea
 
+# Listas
 # Las listas se pueden escribir de 2 maneras [foo,bar,hola,mego]
 # https://es.wikipedia.org/wiki/YAML#Arrays_asociativos_de_listas
 
@@ -29,7 +35,7 @@ jc69120:
   DESCRIPCION: | 
    Alta Potencia
    Potencia: 120W RMS
-   Peso Imán:20 Oz.
+   Peso Imán: 20 Oz.
    Fo: 40 Hz. | Resp. en Frecuencia.: 40-20000 Hz.
    SPL: 94 dB/1W/1m
    Impedancia: 4 ohms
